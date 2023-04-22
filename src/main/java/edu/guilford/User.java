@@ -81,4 +81,22 @@ public class User {
         }
         return password;
     }
+    
+    public String generatePassword2(String favFruit) {
+        //alternating between first name and fruit
+        String s1 = favFruit;
+        String s2 = firstName;
+        String password = "";
+        int i = 0;
+        while (i < s1.length() || i < s2.length()) {
+            if (i < s1.length()) {
+                password += s1.charAt(i);
+            }
+            if (i < s2.length()) {
+                password += s2.charAt(i);
+            }
+            i++;
+        }
+        return password;
+    }
 }
